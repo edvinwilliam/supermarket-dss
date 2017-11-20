@@ -27,6 +27,7 @@
 		$reg->compute($mx, $my);
 
 		$carr = $reg->getCoefficients();
+		$lrRes = $reg->predict();
 	?>
 
     <nav class="navbar navbar-default navbar-fixed-top">
