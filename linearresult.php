@@ -52,7 +52,7 @@
     <br><br>
 
     <div class="col-xs-6 col-centered panel panel-default">
-         <h3>Expert System Result</h3>
+         <h3>Linear Regression Result</h3>
          <br>
 
          <div class="alert alert-info" role="alert">The prediction is <b><?php echo $lrRes; ?></b></div>
