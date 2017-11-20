@@ -42,7 +42,7 @@
               <!-- Change page to DSS System Page -->
               <script type="text/javascript">
                 document.getElementById("dss").onclick = function () {
-                location.href = "/dss/dss.php";
+                location.href = "dss.php";
                 };
               </script>
             </div>

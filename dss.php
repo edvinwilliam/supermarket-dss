@@ -34,7 +34,7 @@
     <div class="col-xs-6 col-centered panel panel-default">
         <h3>Linear Programming</h3>
       
-        <form method="post" action="main.php" name="linearRegression">
+        <form method="post" action="linearresult.php" name="linearRegression">
             <div class="form-group">
               <label for="exampleInputFile">File input</label>
               <input type="file" id="regInputFile" name="LinearRegressionCSV">
@@ -47,7 +47,7 @@
     <div class="col-xs-6 col-centered panel panel-default">
         <h3>Logistic Programming</h3>
 
-        <form method="post" action="main.php" name="logisticRegression">
+        <form method="post" action="logisticresult.php" name="logisticRegression">
             <div class="form-group">
               <label for="exampleInputFile">File input</label>
               <input type="file" id="exampleInputFile" name="LogisticRegressionCSV">
