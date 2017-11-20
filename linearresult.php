@@ -55,7 +55,7 @@
          <h3>Expert System Result</h3>
          <br>
 
-         <div class="alert alert-info" role="alert">The conclusion is <b><?php echo $resultES; ?></b></div>
+         <div class="alert alert-info" role="alert">The prediction is <b><?php echo $lrRes; ?></b></div>
 
     </div>
     
