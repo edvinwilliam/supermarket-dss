@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    //Run LinReg program 
+    <!-- Run LinReg program  -->
     <?php
 		spl_autoload_register(function ($class_name) {
 		    include $class_name . '.php';

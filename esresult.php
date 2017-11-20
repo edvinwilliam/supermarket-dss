@@ -9,8 +9,12 @@
 </head>
 
 <body>
-    //Run ES program 
+    <!-- Run ES program  -->
     <?php 
+      spl_autoload_register(function ($class_name) {
+          include $class_name . '.php';
+      });
+
         $ES = new ExpertSystem(); 
 
         // Bagian yang nantinya echo result
