@@ -2,56 +2,56 @@
 
 abstract class Month
 {
-    const January = 0;
-    const February = 1;
-    const March = 2;
-    const April = 3;
-    const May = 4;
-    const June = 5;
-    const July = 6;
-    const August = 7;
-    const September = 8;
-    const October = 9;
-    const November = 10;
-    const December = 11;
+	const January = 1;
+    const February = 2;
+    const March = 3;
+    const April = 4;
+    const May = 5;
+    const June = 6;
+    const July = 7;
+    const August = 8;
+    const September = 9;
+    const October = 10;
+    const November = 11;
+    const December = 12;
     // etc.
 }
 
 abstract class Holiday
 {
-    const Tidak = 0;
     const TahunBaru = 1;
     const Sekolah = 2;
+    const Tidak = 3;
     // etc.
 }
 
 abstract class Tipe
 {
-    const AlatTulis = 0;
     const Baju = 1;
     const AlatMasak = 2;
     const Elektronik = 3;
+    const AlatTulis = 4;
     // etc.
 }
 
 abstract class Demand
 {
-    const Turun = 0;
-    const Naik = 1;
+    const Turun = 1;
+    const Naik = 2;
     // etc.
 }
 
 abstract class Tren
 {
-    const Turun = 0;
-    const Naik = 1;
+    const Turun = 1;
+    const Naik = 2;
     // etc.
 }
 
 abstract class Result
 {
-    const Turun = 0;
-    const Naik = 1;
+    const Turun = 1;
+    const Naik = 2;
     // etc.
 }
 
@@ -76,107 +76,54 @@ Class ExpertSystem
 	
 	// array of rules that will be fired. Only rules that satisfied workingMemory that enter this array
 	private $markedRules = [];
-
-    public $theMonth;
-
-    public $theCategory;
-
-    public function defineMonth()
-    {
-        if(isset($_POST['selectMonth'])) {   
-            $monthStr = $_POST['selectMonth'];
-
-            if ($monthStr = "January") {
-                $this->theMonth = 0;
-            }
-            if ($monthStr = "February") {
-                $this->theMonth = 1;
-            }
-            if ($monthStr = "March") {
-                $this->theMonth = 2;
-            }
-            if ($monthStr = "April") {
-                $this->theMonth = 3;
-            }
-            if ($monthStr = "May") {
-                $this->theMonth = 4;
-            }
-            if ($monthStr = "June") {
-                $this->theMonth = 5;
-            }
-            if ($monthStr = "July") {
-                $this->theMonth = 6;
-            }
-            if ($monthStr = "August") {
-                $this->theMonth = 7;
-            }
-            if ($monthStr = "September") {
-                $this->theMonth = 8;
-            }
-            if ($monthStr = "October") {
-                $this->theMonth = 9;
-            }
-            if ($monthStr = "November") {
-                $this->theMonth = 10;
-            }
-            if ($monthStr = "December") {
-                $this->theMonth = 11;
-            }
-
-        }
-
-    }
-
-    public function defineCategory() {
-        if(isset($_POST['selectCat'])) {   
-            $catStr = $_POST['selectCat'];
-
-            if ($catStr = "AlatTulis") {
-                $this->theCategory = 0;
-            }
-            if ($catStr = "Baju") {
-                $this->theCategory = 1;
-            }
-            if ($catStr = "AlatMasak") {
-                $this->theCategory = 2;
-            }
-            if ($catStr = "Elektronik") {
-                $this->theCategory = 3;
-            }
-
-        }
-    }
 	
-	public function determine($pastSales, $lrRes, $logRes)
+	public function determine($month, $tipe, $pastSales, $lrRes, $logRes)
 	{
-		$this->workingMemory["month"] = $this->theMonth;
-		$this->workingMemory["tipe"] = $this->theCategory;
+		if ($month == 0 || $tipe == 0){
+			throw new Exception("No Zero Value in Enumeration");
+		}
+		$this->workingMemory["month"] = $month;
+		$this->workingMemory["tipe"] = $tipe;
 		$this->workingMemory["pastSales"] = $pastSales;
 		$this->workingMemory["linearResult"] = $lrRes;
 		$this->workingMemory["logisticResult"] = $logRes;
 		
-		// echo "y";
-		
 		// Initialize existing rules
-		for ($i = 0; $i < 15; $i++){
+		for ($i = 1; $i <= 13; $i++){
 			array_push($this->existingRules, $i);
 		}
+		
+		$i=0;
+		foreach($this->existingRules as $v){
+			$p = $this->precondition($v);
+			if ($p != -999 && $p != null){
+				$this->markedRules[$i] = $this->precondition($v);
+				$i++;
+			}
+		}
+		
+		foreach($this->markedRules as $v){
+			$this->fireRules($v);
+		}
+		
+		$this->existingRules = array_diff($this->existingRules, $this->markedRules); $this->existingRules = array_values($this->existingRules);
+		$this->markedRules = [];
+		
 
 		do {
-			// echo "debug1";
+			$i=0;
 			foreach($this->existingRules as $v){
-				if ($this->precondition($v) != -999){
-					array_push($this->markedRules, $v);
+				$p = $this->precondition($v);
+				if ($p != -999 && $p != null){
+					$this->markedRules[$i] = $this->precondition($v);
+					$i++;
 				}
-				// echo "debug2";
 			}
 			
 			foreach($this->markedRules as $v){
 				$this->fireRules($v);
-				// echo "YES:".$v;
 			}
 			
-			// echo "debug3";
 			$this->existingRules = array_diff($this->existingRules, $this->markedRules); $this->existingRules = array_values($this->existingRules);
 			$this->markedRules = [];
 		} while ($this->result == null);
@@ -186,54 +133,55 @@ Class ExpertSystem
 	
 	private function precondition($int){
 		switch ($int) {
-			case 0:
-				if (array_key_exists("month", $this->workingMemory)) return 0;
+			case 13:
+				if (array_key_exists("month", $this->workingMemory)) return 13;
 				break;
 			case 1:
-				if (array_key_exists("month", $this->workingMemory)) return $int;
+				if (array_key_exists("month", $this->workingMemory)) return 1;
 				break;
 			case 2:
-				if (array_key_exists("month", $this->workingMemory)) return $int;
+				if (array_key_exists("month", $this->workingMemory)) return 2;
 				break;
 			case 3:
-				if (array_key_exists("holiday", $this->workingMemory)) return $int;
+				if (array_key_exists("holiday", $this->workingMemory)) return 3;
 				break;
 			case 4:
-				if (array_key_exists("holiday", $this->workingMemory) && array_key_exists("tipe", $this->workingMemory)) return $int;
+				if (array_key_exists("holiday", $this->workingMemory) && array_key_exists("tipe", $this->workingMemory)) return 4;
 				break;
 			case 5:
-				if (array_key_exists("holiday", $this->workingMemory) && array_key_exists("tipe", $this->workingMemory)) return $int;
+				if (array_key_exists("holiday", $this->workingMemory) && array_key_exists("tipe", $this->workingMemory)) return 5;
 				break;
 			case 6:
-				if (array_key_exists("holiday", $this->workingMemory) && array_key_exists("tipe", $this->workingMemory)) return $int;
+				if (array_key_exists("holiday", $this->workingMemory) && array_key_exists("tipe", $this->workingMemory)) return 6;
 				break;
 			case 7:
-				if (array_key_exists("holiday", $this->workingMemory) && array_key_exists("tipe", $this->workingMemory)) return $int;
+				if (array_key_exists("holiday", $this->workingMemory) && array_key_exists("tipe", $this->workingMemory)) return 7;
 				break;
 			case 8:
-				if (array_key_exists("linearResult", $this->workingMemory) && array_key_exists("pastSales", $this->workingMemory)) return $int;
+				if (array_key_exists("linearResult", $this->workingMemory) && array_key_exists("pastSales", $this->workingMemory)) return 8;
 				break;
 			case 9:
-				if (array_key_exists("tren", $this->workingMemory) && array_key_exists("demand", $this->workingMemory)) return $int;
+				if (array_key_exists("tren", $this->workingMemory) && array_key_exists("demand", $this->workingMemory)) return 9;
 				break;
 			case 10:
-				if (array_key_exists("tren", $this->workingMemory) && array_key_exists("demand", $this->workingMemory)) return $int;
+				if (array_key_exists("tren", $this->workingMemory) && array_key_exists("demand", $this->workingMemory)) return 10;
 				break;
 			case 11:
-				if (array_key_exists("tren", $this->workingMemory) && array_key_exists("demand", $this->workingMemory)&& array_key_exists("logisticResult", $this->workingMemory)) return $int;
+				if (array_key_exists("tren", $this->workingMemory) && array_key_exists("demand", $this->workingMemory)&& array_key_exists("logisticResult", $this->workingMemory)) return 11;
 				break;
 			case 12:
-				if (array_key_exists("tren", $this->workingMemory) && array_key_exists("demand", $this->workingMemory)&& array_key_exists("logisticResult", $this->workingMemory)) return $int;
+				if (array_key_exists("tren", $this->workingMemory) && array_key_exists("demand", $this->workingMemory)&& array_key_exists("logisticResult", $this->workingMemory)) return 12;
 				break;
 			default:
 				return -999;
+				break;
 		}
 	}
 	
 	private function fireRules($int){
 		
 		switch ($int) {
-			case 0:
+			case 13:
 				if ($this->workingMemory["month"] == Month::January) $this->workingMemory["holiday"] = Holiday::TahunBaru;
 				break;
 			case 1:
@@ -277,7 +225,13 @@ Class ExpertSystem
 				{
 					$this->result = $this->workingMemory["logisticResult"] == Result::Naik ? Result::Naik : Result::Turun;
 				}
-				break;				
+				break;
+			default:
+				break;
 		}
+	}
+	
+	public function getResult(){
+		return $this->result;
 	}
 }

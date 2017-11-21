@@ -15,8 +15,74 @@
           include $class_name . '.php';
       });
 
+      if(isset($_POST['selectMonth'])) {   
+            $monthStr = $_POST['selectMonth'];
+
+            if ($monthStr == "January") {
+                $theMonth = 1;
+            }
+            if ($monthStr == "February") {
+                $theMonth = 2;
+            }
+            if ($monthStr == "March") {
+                $theMonth = 3;
+            }
+            if ($monthStr == "April") {
+                $theMonth = 4;
+            }
+            if ($monthStr == "May") {
+                $theMonth = 5;
+            }
+            if ($monthStr == "June") {
+                $theMonth = 6;
+            }
+            if ($monthStr == "July") {
+                $theMonth = 7;
+            }
+            if ($monthStr == "August") {
+                $theMonth = 8;
+            }
+            if ($monthStr == "September") {
+                $theMonth = 9;
+            }
+            if ($monthStr == "October") {
+                $theMonth = 10;
+            }
+            if ($monthStr == "November") {
+                $theMonth = 11;
+            }
+            if ($monthStr == "December") {
+                $theMonth = 12;
+            }
+        }
+
+        if(isset($_POST['selectCat'])) {   
+            $catStr = $_POST['selectCat'];
+
+            if ($catStr == "Baju") {
+                $theCategory = 1;
+            }
+            if ($catStr == "AlatMasak") {
+                $theCategory = 2;
+            }
+            if ($catStr == "Elektronik") {
+                $theCategory = 3;
+            }
+            if ($catStr == "AlatTulis") {
+                $theCategory = 4;
+            }
+
+        }
+
+
         $ES = new ExpertSystem(); 
-        $res = $ES->determine(0, 0, 0, 0, 0);
+        $res = $ES->determine($theMonth, $theCategory, 4, 5, 1);
+
+        if ($res == 1) {
+          $resStr = "Pengadaan dianjurkan untuk turun";
+        } else {
+          $resStr = "Pengadaan dianjurkan untuk naik";
+        }
     ?>
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -45,7 +111,7 @@
          <h3>Expert System Result</h3>
          <br>
 
-         <div class="alert alert-info" role="alert">The conclusion is <b><?php echo $res; ?></b></div>
+         <div class="alert alert-info" role="alert">Kesimpulan yang didapatkan adalah <b><?php echo $resStr; ?></b></div>
 
     </div>
     
