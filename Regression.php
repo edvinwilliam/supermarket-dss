@@ -60,6 +60,7 @@ class Regression
         $dfTotal = $sample_size - 1;
         $dfModel = $num_independent - 1;
         $dfResidual = $dfTotal - $dfModel;
+		
         //create unit vector..
         $um = new Matrix(array_fill(0, $sample_size, [1]));
         //SSR = b(t)X(t)Y - (Y(t)UU(T)Y)/n
@@ -404,9 +405,14 @@ class Regression
      */
     private $y = [];
 	
-	public function predict(){
-		$res = 3;
-		return $res;
+	public function predict($sales, $stock, $leftover, $month){
 		
+		if ($sales <= $stock){	
+			$res = ($this->coefficients[0] + $this->coefficients[1] * $sales + $this->coefficients[2] * $stock + $this->coefficients[3] * $leftover + $this->coefficients[4] * $month) / 100;
+			return ceil($res);
+		}
+		else{
+			throw new Exception('Sales cannot be higher than stock');
+		}
 	}
 }

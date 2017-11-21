@@ -11,26 +11,31 @@
 <body>
     <!-- Run LinReg program  -->
     <?php
-    ini_set('max_execution_time', 300);
+      $theSales = 200;
+      $theStock = 310;
+      $theLeftover = 8;
+      $theMonth = 6;
 
-		spl_autoload_register(function ($class_name) {
-		    include $class_name . '.php';
-		});
+      ini_set('max_execution_time', 300);
 
-		$reg = new Regression();
+  		spl_autoload_register(function ($class_name) {
+  		    include $class_name . '.php';
+  		});
 
-		// $reg->displayVar(); echo '<br>';
+  		$reg = new Regression();
 
-		$reg->loadCSV('data/testfile.csv', [1], [9, 10, 11, 12]);
+  		// $reg->displayVar(); echo '<br>';
 
-		$mx = new Matrix($reg->getX());
-		$my = new Matrix($reg->getY());
+  		$reg->loadCSV('data/testfile.csv', [1], [2, 3, 4, 5]);
 
-		$reg->compute($mx, $my);
+  		$mx = new Matrix($reg->getX());
+  		$my = new Matrix($reg->getY());
 
-		$carr = $reg->getCoefficients();
-		$lrRes = $reg->predict();
-	?>
+  		$reg->compute($mx, $my);
+
+  		$carr = $reg->getCoefficients();
+  		$lrRes = $reg->predict($theSales, $theStock, $theLeftover, $theMonth);
+  	?>
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">

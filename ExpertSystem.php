@@ -77,9 +77,9 @@ Class ExpertSystem
 	// array of rules that will be fired. Only rules that satisfied workingMemory that enter this array
 	private $markedRules = [];
 
-    public $theMonth = defineMonth();
+    public $theMonth;
 
-    public $theCategory = defineCategory();
+    public $theCategory;
 
     public function defineMonth()
     {
@@ -87,40 +87,40 @@ Class ExpertSystem
             $monthStr = $_POST['selectMonth'];
 
             if ($monthStr = "January") {
-                return 0;
+                $this->theMonth = 0;
             }
             if ($monthStr = "February") {
-                return 1;
+                $this->theMonth = 1;
             }
             if ($monthStr = "March") {
-                return 2;
+                $this->theMonth = 2;
             }
             if ($monthStr = "April") {
-                return 3;
+                $this->theMonth = 3;
             }
             if ($monthStr = "May") {
-                return 4;
+                $this->theMonth = 4;
             }
             if ($monthStr = "June") {
-                return 5;
+                $this->theMonth = 5;
             }
             if ($monthStr = "July") {
-                return 6;
+                $this->theMonth = 6;
             }
             if ($monthStr = "August") {
-                return 7;
+                $this->theMonth = 7;
             }
             if ($monthStr = "September") {
-                return 8;
+                $this->theMonth = 8;
             }
             if ($monthStr = "October") {
-                return 9;
+                $this->theMonth = 9;
             }
             if ($monthStr = "November") {
-                return 10;
+                $this->theMonth = 10;
             }
             if ($monthStr = "December") {
-                return 11;
+                $this->theMonth = 11;
             }
 
         }
@@ -132,30 +132,30 @@ Class ExpertSystem
             $catStr = $_POST['selectCat'];
 
             if ($catStr = "AlatTulis") {
-                return 0;
+                $this->theCategory = 0;
             }
             if ($catStr = "Baju") {
-                return 1;
+                $this->theCategory = 1;
             }
             if ($catStr = "AlatMasak") {
-                return 2;
+                $this->theCategory = 2;
             }
             if ($catStr = "Elektronik") {
-                return 3;
+                $this->theCategory = 3;
             }
 
         }
     }
 	
-	public function determine($month, $tipe, $pastSales, $lrRes, $logRes)
+	public function determine($pastSales, $lrRes, $logRes)
 	{
-		$this->workingMemory["month"] = $month;
-		$this->workingMemory["tipe"] = $tipe;
+		$this->workingMemory["month"] = $this->theMonth;
+		$this->workingMemory["tipe"] = $this->theCategory;
 		$this->workingMemory["pastSales"] = $pastSales;
 		$this->workingMemory["linearResult"] = $lrRes;
 		$this->workingMemory["logisticResult"] = $logRes;
 		
-		echo "y";
+		// echo "y";
 		
 		// Initialize existing rules
 		for ($i = 0; $i < 15; $i++){
@@ -163,20 +163,20 @@ Class ExpertSystem
 		}
 
 		do {
-			echo "debug1";
+			// echo "debug1";
 			foreach($this->existingRules as $v){
 				if ($this->precondition($v) != -999){
 					array_push($this->markedRules, $v);
 				}
-				echo "debug2";
+				// echo "debug2";
 			}
 			
 			foreach($this->markedRules as $v){
 				$this->fireRules($v);
-				echo "YES:".$v;
+				// echo "YES:".$v;
 			}
 			
-			echo "debug3";
+			// echo "debug3";
 			$this->existingRules = array_diff($this->existingRules, $this->markedRules); $this->existingRules = array_values($this->existingRules);
 			$this->markedRules = [];
 		} while ($this->result == null);

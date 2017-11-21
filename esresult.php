@@ -16,9 +16,7 @@
       });
 
         $ES = new ExpertSystem(); 
-
-        // Bagian yang nantinya echo result
-        $resultES = $ES->getResult();
+        $res = $ES->determine(0, 0, 0, 0, 0);
     ?>
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -47,7 +45,7 @@
          <h3>Expert System Result</h3>
          <br>
 
-         <div class="alert alert-info" role="alert">The conclusion is <b><?php echo $resultES; ?></b></div>
+         <div class="alert alert-info" role="alert">The conclusion is <b><?php echo $res; ?></b></div>
 
     </div>
     

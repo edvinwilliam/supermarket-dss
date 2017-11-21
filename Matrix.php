@@ -112,6 +112,7 @@ class Matrix
                 }
             }
         }
+		$determinant = $determinant == 0 ? 0.0000001 : $determinant;
         return $determinant;
     }
     /**
