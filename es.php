@@ -34,7 +34,7 @@
         <form method="post" action="esresult.php" name="expertSystem">
             <div class="form-group">
               <label for="month">Month</label>
-              <select class="form-control">
+              <select class="form-control" name="selectMonth">
                 <option>January</option>
                 <option>February</option>
                 <option>March</option>
@@ -52,11 +52,11 @@
 
             <div class="form-group">
               <label for="category">Product Category</label>
-              <select class="form-control">
-                <option>Stationery</option>
-                <option>Fashion</option>
-                <option>Electronics</option>
-                <option>Cooking Utensils</option>
+              <select class="form-control" name="selectCat">
+                <option>AlatTulis</option>
+                <option>Baju</option>
+                <option>AlatMasak</option>
+                <option>Elektronik</option>
               </select>
             </div>
 
