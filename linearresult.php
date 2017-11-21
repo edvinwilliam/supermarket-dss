@@ -11,6 +11,8 @@
 <body>
     <!-- Run LinReg program  -->
     <?php
+    ini_set('max_execution_time', 300);
+
 		spl_autoload_register(function ($class_name) {
 		    include $class_name . '.php';
 		});

@@ -350,6 +350,7 @@ class Regression
         }
         return $z;
     }
+	
     /**
      * @var int|float $f F statistic.
      */
@@ -403,11 +404,9 @@ class Regression
      */
     private $y = [];
 	
-	// property declaration
-    public $var = 'a default value';
-
-    // method declaration
-    public function displayVar() {
-        echo $this->var;
-    }
+	public function predict(){
+		$res = 3;
+		return $res;
+		
+	}
 }

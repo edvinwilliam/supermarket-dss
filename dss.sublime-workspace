@@ -1,0 +1,435 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"resu",
+				"resultES"
+			],
+			[
+				"T",
+				"ToiletName"
+			],
+			[
+				"ToiletL",
+				"ToiletLng"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"get",
+				"getCurrentPosition"
+			],
+			[
+				"add",
+				"addListener"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 892.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Enable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"theme",
+				"Select Theme"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"package i",
+				"Package Control: Install Package"
+			],
+			[
+				"beaut",
+				"HTMLBeautify"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"sspy",
+				"Set Syntax: HTML (ASP)"
+			],
+			[
+				"git ",
+				"Git: Init"
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"git init",
+				"Git: Init"
+			],
+			[
+				"package re",
+				"Package Control: Remove Package"
+			],
+			[
+				"package l",
+				"Package Control: List Packages"
+			],
+			[
+				"package ",
+				"Package Control: List Packages"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package o",
+				"Package Control: Remove Package"
+			],
+			[
+				"trimmer",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"package insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ssp",
+				"Set Syntax: Python"
+			],
+			[
+				"SSPY",
+				"Set Syntax: HTML (ASP)"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Install Package Control"
+			]
+		],
+		"width": 1396.0
+	},
+	"console":
+	{
+		"height": 395.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/rezha/Videos/main.php",
+		"/C/xampp/htdocs/dss/esresult.php",
+		"/C/xampp/htdocs/dss/es.php",
+		"/C/xampp/htdocs/dss/linearresult.php",
+		"/C/xampp/htdocs/dss/dss.php",
+		"/C/Users/rezha/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/xampp/htdocs/dss/Regression.php",
+		"/C/xampp/htdocs/dss/README.md",
+		"/C/Users/rezha/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/xampp/htdocs/dss/ExpertSystem.php",
+		"/C/xampp/htdocs/dss/expertsystem.php",
+		"/C/xampp/htdocs/restroom-location/index.php",
+		"/C/xampp/htdocs/restroom-location/add2mysql.php",
+		"/C/Users/rezha/Videos/ExpertSystem.php",
+		"/C/Users/rezha/Videos/Regression.php",
+		"/C/xampp/htdocs/dss/expert.php",
+		"/C/Users/rezha/Videos/Matrix.php",
+		"/C/xampp/htdocs/restroom-location/database2xml.php",
+		"/C/xampp/htdocs/restroom-location/js/maps.js",
+		"/C/Users/rezha/Videos/htdocs/progif/restroom-location/css/style.css",
+		"/C/xampp/htdocs/dss/css/bootstrap.css",
+		"/C/Users/rezha/Videos/htdocs/progif/restroom-location/js/maps.js",
+		"/C/Users/rezha/Videos/htdocs/progif/restroom-location/add2mysql.php",
+		"/C/Users/rezha/Videos/htdocs/progif/restroom-location/index.php",
+		"/C/Users/rezha/Videos/htdocs/index.php",
+		"/C/Users/rezha/Videos/htdocs/progif/restroom-location/database2xml.php",
+		"/C/xampp/htdocs/progif/restroom-location/add2mysql.php",
+		"/C/xampp/htdocs/progif/restroom-location/index.php",
+		"/C/Users/rezha/Documents/ITB/Sistem dan Teknologi Informasi/Tugas Akhir/References/Algorithm/From Mastering Bitcoin Book.cpp",
+		"/C/Users/rezha/Documents/dasken3/digit_md5.py",
+		"/C/Users/rezha/Documents/dasken3/mnist_oreilly.py",
+		"/C/Users/rezha/Downloads/Assignment3/a3Test.m",
+		"/C/Users/rezha/Downloads/Assignment3/a3.m",
+		"/C/Users/rezha/Documents/dasken2/digit_md5.py",
+		"/C/Users/rezha/Documents/dasken2/mnist_oreilly.py",
+		"/C/Users/rezha/Documents/dasken/mnist_oreilly.py",
+		"/C/Users/rezha/Downloads/mnist_oreilly.py",
+		"/C/xampp/htdocs/student/14030/index.php",
+		"/C/Users/rezha/Documents/indonesia.py",
+		"/C/Users/rezha/Documents/arduino.c",
+		"/C/xampp/htdocs/student/14030/js/maps.js",
+		"/C/xampp/htdocs/student/14030/add2mysql.php",
+		"/C/Users/rezha/Downloads/temp.cs",
+		"/C/Users/rezha/Documents/clickobject.cs",
+		"/C/Users/rezha/Documents/valuenumber.cs",
+		"/C/Users/rezha/Downloads/halo eja.cs",
+		"/C/Users/rezha/Documents/Unity/TapMath-master/Assets/myDatabase.sqlite",
+		"/C/Users/rezha/Documents/indonesia.txt",
+		"/C/Users/rezha/Documents/Git/rezkus.github.io/index.html",
+		"/C/Users/rezha/Documents/ITB/Sistem dan Teknologi Informasi/IntegraSTI/Semester 3/Sistem Digital dan Mikroprosesor/Source Code Smart Terrarium.pas",
+		"/C/Users/rezha/Desktop/Books/Alibaba - The House that Jack Ma Built/titlepage.xhtml",
+		"/C/Users/rezha/Desktop/Books/Alibaba - The House that Jack Ma Built/text/part0000.html",
+		"/C/Users/rezha/Desktop/Books/Alibaba - The House that Jack Ma Built/META-INF/container.xml",
+		"/C/Users/rezha/Desktop/Books/Alibaba - The House that Jack Ma Built/content.opf",
+		"/C/Users/rezha/Desktop/Books/Alibaba - The House that Jack Ma Built/META-INF/calibre_bookmarks.txt",
+		"/C/Users/rezha/GlassFish_Server/glassfish/domains/domain-ws/config/domain.xml",
+		"/C/Users/rezha/Music/A/addMarker.java",
+		"/C/Users/rezha/Music/A/Maps.java",
+		"/C/Users/rezha/Music/A/Marker.java",
+		"/C/Users/rezha/Music/A/asd.xml",
+		"/C/Users/rezha/Music/A/showToilet.java",
+		"/C/Users/rezha/Music/A/index.php",
+		"/C/Users/rezha/Music/A/maps.js",
+		"/C/Users/rezha/Downloads/marketplaceWS.java",
+		"/C/xampp/htdocs/student/14027/dbconf.php",
+		"/C/xampp/htdocs/student/14027/XML/b.xml",
+		"/C/xampp/htdocs/student/14027/API.php",
+		"/C/xampp/htdocs/student/14030/database2xml.php",
+		"/C/xampp/htdocs/progif/restroom-location/css/style.css",
+		"/C/xampp/htdocs/progif/restroom-location/database2xml.php",
+		"/C/xampp/htdocs/progif/restroom-location/js/maps.js",
+		"/C/Users/rezha/Videos/P1.php",
+		"/C/Users/rezha/Videos/api.php",
+		"/C/xampp/htdocs/progif/restroom-location/README.md",
+		"/C/xampp/htdocs/progif/index.html",
+		"/C/xampp/htdocs/progif/add2mysql.php",
+		"/C/xampp/htdocs/progif/database2xml.php",
+		"/C/xampp/htdocs/progif/css/style.css",
+		"/C/xampp/htdocs/progif/js/maps.js",
+		"/C/xampp/htdocs/index.php",
+		"/C/xampp/htdocs/progif/index.php",
+		"/C/xampp/htdocs/progif/anjeng.html",
+		"/C/xampp/htdocs/mysql_xml.php",
+		"/C/xampp/htdocs/anjeng.html",
+		"/C/xampp/htdocs/toiletdb.php",
+		"/C/xampp/htdocs/uts.php",
+		"/C/xampp/tesanjeng.php",
+		"/C/Users/rezha/Music/mysql_xml.php",
+		"/C/xampp/htdocs/tes.xml",
+		"/C/Users/rezha/Documents/Projects/Restroom Location/tes.html",
+		"/C/Users/rezha/Documents/Projects/Restroom Location/tesdatabase.html",
+		"/C/xampp/htdocs/dariawal.html",
+		"/C/Users/rezha/Documents/dariawal.html",
+		"/C/Users/rezha/Documents/tes.xml",
+		"/C/Users/rezha/Documents/Projects/Restroom Location/latitude langitude.txt",
+		"/C/Users/rezha/Documents/Projects/Restroom Location/asd.html",
+		"/C/Users/rezha/Documents/Projects/Restroom Location/TESXML.html",
+		"/C/Users/rezha/AppData/Roaming/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/C/Users/rezha/Documents/goers_schema_idx.psql",
+		"/C/Users/rezha/Documents/temp.sql",
+		"/C/Users/rezha/Documents/tes.html",
+		"/C/Users/rezha/AppData/Local/Google/Chrome/User Data/Default/Extensions/mjcblgoejhkkkhgeadejhkpldglnfmcj/2.0.0_0/README.md",
+		"/C/Users/rezha/AppData/Local/Google/Chrome/User Data/Default/Extensions/mjcblgoejhkkkhgeadejhkpldglnfmcj/2.0.0_0/styles.css",
+		"/C/Users/rezha/AppData/Local/Google/Chrome/User Data/Default/Extensions/mjcblgoejhkkkhgeadejhkpldglnfmcj/2.0.0_0/home.js",
+		"/C/Users/rezha/AppData/Local/Google/Chrome/User Data/Default/Extensions/mjcblgoejhkkkhgeadejhkpldglnfmcj/2.0.0_0/home.html",
+		"/C/Users/rezha/Downloads/personal_brand.svg",
+		"/C/Users/rezha/AppData/Local/Google/Chrome/User Data/Default/Extensions/mjcblgoejhkkkhgeadejhkpldglnfmcj/2.0.0_0/manifest.json",
+		"/C/xampp/htdocs/eastco/resources/views/layouts/app.blade.php",
+		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/C/Users/rezha/Documents/Projects/Restroom Location/restroom.html",
+		"/C/xampp/htdocs/application/resources/views/customer/menu.blade.php",
+		"/C/xampp/htdocs/application/public/index.php",
+		"/C/xampp/htdocs/application/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/application/config/view.php",
+		"/C/Users/rezha/.gitconfig",
+		"/C/Users/rezha/Music/auwouwo.txt",
+		"/C/Users/rezha/Documents/Projects/East Corner Website/web/ayamayaman.html",
+		"/C/Users/rezha/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/rezha/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/xampp/application/resources/views/customer/menu.blade.php",
+		"/C/Users/rezha/Documents/Projects/East Corner Website/web/d.html",
+		"/C/Users/rezha/Documents/Projects/East Corner Website/web/css/memenu.css",
+		"/C/xampp/application/.env",
+		"/C/Users/rezha/Documents/Projects/East Corner Website/web/css/flexslider.css",
+		"/C/Users/rezha/Documents/Projects/East Corner Website/web/terminalcoffee.html",
+		"/C/Users/rezha/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/rezha/Downloads/lighting-web/web/index.html"
+	],
+	"find":
+	{
+		"height": 68.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"testfile",
+			"dss",
+			"var",
+			"loadCSV",
+			"$file",
+			"matrix",
+			"http-listener-1",
+			"infoWindow.",
+			"r(",
+			"map.",
+			"alert",
+			"'F, M'",
+			"events",
+			">",
+			"login",
+			"class=\"login"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 68.0
+	},
+	"input":
+	{
+		"height": 141.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "dss.sublime-project",
+	"replace":
+	{
+		"height": 126.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 525.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
