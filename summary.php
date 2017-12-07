@@ -9,38 +9,27 @@
 </head>
 
 <body>
-    <!-- Run LinReg program  -->
+    
+
     <?php
-      $theSales = 200;
-      $theStock = 310;
-      $theLeftover = 8;
-      $theMonth = 6;
+      if (file_exists('lrRes.php')) {
+        include 'lrRes.php';
+      } else {
+        $lrRes = "- (Belum pernah memprediksi jumlah stok barang)";
+      }
 
-      ini_set('max_execution_time', 300);
+      if (file_exists('resStr.php')) {
+        include 'resStr.php';
+      } else {
+        $resStr = "- (Belum pernah menggunakan Expert System)";
+      }
 
-  		spl_autoload_register(function ($class_name) {
-  		    include $class_name . '.php';
-  		});
-
-  		$reg = new Regression();
-
-  		// $reg->displayVar(); echo '<br>';
-
-  		$reg->loadCSV('data/testfile.csv', [1], [2, 3, 4, 5]);
-
-  		$mx = new Matrix($reg->getX());
-  		$my = new Matrix($reg->getY());
-
-  		$reg->compute($mx, $my);
-
-  		$carr = $reg->getCoefficients();
-  		$lrRes = $reg->predict($theSales, $theStock, $theLeftover, $theMonth);
-
-      $var_str = var_export($lrRes, true);
-      $var = "<?php\n\n\$lrRes = $var_str;\n\n?>";
-      file_put_contents('lrRes.php', $var);
-
-  	?>
+      if (file_exists('logRes.php')) {
+        include 'logRes.php';
+      } else {
+        $logRes = "- (Belum pernah memprediksi tren stok barang)";
+      }
+     ?>
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -61,13 +50,29 @@
         </div>
     </nav>
 
-    <br><br>
+    <br>
 
     <div class="col-xs-6 col-centered panel panel-default">
-         <h3>Prediksi Jumlah Stok Barang</h3>
-         <br>
+         <h3>Linear Regression Result</h3>
 
-         <div class="alert alert-info" role="alert">The prediction is <b><?php echo $lrRes; ?></b></div>
+
+         <div class="alert alert-info" role="alert">Jumlah barang akan berubah menjadi: <b><?php echo $lrRes; ?></b></div>
+
+    </div>
+
+    <div class="col-xs-6 col-centered panel panel-default">
+         <h3>Logistic Regression Result</h3>
+
+
+         <div class="alert alert-info" role="alert">Tren stok barang akan: <b><?php if ($logRes == 0) { echo"Tidak Naik"; } else {echo "Naik";} ?></div>
+
+    </div>
+
+    <div class="col-xs-6 col-centered panel panel-default">
+         <h3>Expert System Result</h3>
+
+
+         <div class="alert alert-info" role="alert">Kesimpulan yang didapatkan adalah <b><?php echo $resStr; ?></b></div>
 
     </div>
     

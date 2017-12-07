@@ -83,6 +83,10 @@
         } else {
           $resStr = "Pengadaan dianjurkan untuk naik";
         }
+
+        $var_str = var_export($resStr, true);
+        $var = "<?php\n\n\$resStr = $var_str;\n\n?>";
+        file_put_contents('resStr.php', $var);
     ?>
 
     <nav class="navbar navbar-default navbar-fixed-top">
